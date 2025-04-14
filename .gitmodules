@@ -1,0 +1,6 @@
+[submodule "Actividad5/repoProyecto"]
+	path = Actividad5/repoProyecto
+	url = https://github.com/aclj20/repoProyectoSubmod.git
+[submodule "Actividad5/repoPrueba"]
+	path = Actividad5/repoPrueba
+	url = https://github.com/aclj20/repoPruebaSubmod.git
