@@ -37,6 +37,7 @@ Y para el análisis estático con pylint:
 - Agrega el método `vaciar` en `src/carrito.py` que realice `self.items = []`.
 ![[Pasted image 20250422235140.png]]
 - Crea pruebas en `tests/test_carrito.py` que agreguen varios productos, invoquen `vaciar()` y verifiquen que `obtener_items()` retorne una lista vacía y `calcular_total()` retorne 0.
+
 ![](img-act8/Pasted_image_20250422235117.png)
 
 ##### Ejercicio 2: Descuento por compra mínima
@@ -54,6 +55,7 @@ Y para el análisis estático con pylint:
 - Modifica `Producto` en `src/carrito.py` añadiendo `self.stock = stock` en el constructor y actualiza la fábrica en `src/factories.py` para que genere un stock (por ejemplo, entre 1 y 100).
 ![](img-act8/Pasted_image_20250423003425.png)
 - En `Carrito.agregar_producto`, antes de agregar o incrementar la cantidad, verifica que la suma de cantidades en el carrito no supere el `stock` del producto.
+
 ![](img-act8/Pasted_image_20250423003404.png)
 
 - Escribe pruebas que verifiquen:
