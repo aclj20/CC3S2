@@ -7,7 +7,7 @@ Pasos Previos: Se creó el repositorio `prueba-git-rebase` con un commit inicial
 > **Pregunta:** Presenta el historial de ramas obtenida hasta el momento.
 
    El historial de commits se bifurca, cada rama tiene su propio camino a partir del commit original.
-   ![Historial de ramas antes del rebase](img-act6/Pasted image 20250419194432.png)
+   ![Historial de ramas antes del rebase](img-act6/Pasted_image_20250419194432.png)
 
    > **Tarea**: Realiza el rebase de `new-feature` sobre `main`
 
