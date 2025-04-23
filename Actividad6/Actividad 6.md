@@ -111,7 +111,7 @@ El nuevo commit contiene los mismos cambios, pero con un hash diferente
 
 **Ejercicio 1: Crear ramas de funcionalidades (feature branches)**
 
-![[Pasted image 20250420072119.png]]
+![](img-act6/Pasted_image_20250420072119.png)
 
 **Pregunta:** ¿Por qué es importante trabajar en ramas de funcionalidades separadas durante un sprint?
 Es importante trabajar en ramas de funcionalidades separadas durante un sprint para mantener el historial claro, organizar los commits por funcionalidad y evitar que los cambios interfieran con otras funciones en desarrollo
@@ -120,7 +120,8 @@ Es importante trabajar en ramas de funcionalidades separadas durante un sprint p
 
 **Ejercicio 2: Integración continua con git rebase**
 
-![[Pasted image 20250420072508.png]]
+![](img-act6/Pasted_image_20250420072508.png)
+
 
 **Pregunta:** ¿Qué ventajas proporciona el rebase durante el desarrollo de un sprint en términos de integración continua?
 El rebase durante el desarrollo de un sprint permite integrar los últimos cambios de la rama principal en las ramas de funcionalidad, asegurando compatibilidad continua, y mantiene el historial lineal
@@ -129,9 +130,9 @@ El rebase durante el desarrollo de un sprint permite integrar los últimos cambi
 
 **Ejercicio 3: Integración selectiva con git cherry-pick**
 Se aplicó la funcionalidad lista con `cherry-pick` a `main`
-![[Pasted image 20250420073023.png]]
-![[Pasted image 20250420073213.png]]
-![[Pasted image 20250420073230.png]]
+![](img-act6/Pasted_image_20250420073023.png)
+![](img-act6/Pasted_image_20250420073213.png)
+![](img-act6/Pasted_image_20250420073230.png)
 
 **Pregunta:** ¿Cómo ayuda `git cherry-pick` a mostrar avances de forma selectiva en un sprint review?
 `git cherry-pick` ayuda en un sprint review al permitir reaplicar commits específicos que representan funcionalidades ya terminadas, mostrando solo los avances listos sin incluir cambios en progreso
@@ -139,24 +140,26 @@ Se aplicó la funcionalidad lista con `cherry-pick` a `main`
 #### **Fase 4: Retrospectiva del sprint (sprint retrospective)**
 
 **Ejercicio 4: Revisión de conflictos y resolución**
-![[Pasted image 20250420073637.png]]
+![](img-act6/Pasted_image_20250420073637.png)
 
 Los commits `620acbc` y `82d3b09` modifican la misma línea de un archivo, Git no puede resolver automáticamente cuál de los cambios mantener, y por eso se presenta un conflicto.
-![[Pasted image 20250420073854.png]]
+![](img-act6/Pasted_image_20250420073854.png)
 
 **Pregunta**: ¿Cómo manejas los conflictos de fusión al final de un sprint? ¿Cómo puede el equipo mejorar la comunicación para evitar conflictos grandes?
 Una alternativa es abrir el archivo en conflicto en cuestión y de manera manual resolver el conflicto.
-![[Pasted image 20250420074350.png]]
-![[Pasted image 20250420074453.png]]
+![](img-act6/Pasted_image_20250420074350.png)
+![](img-act6/Pasted_image_20250420074453.png)
+
 
 ![[Pasted image 20250420074928.png]]
 El equipo puede mejorar la comunicación para evitar conflictos grandes mediante integraciones frecuentes, asegurándose de que los miembros estén al tanto de en qué áreas están trabajando otros, utilizando ramas pequeñas y específicas para cada tarea.
 
 #### **Fase 5: Fase de desarrollo, automatización de integración continua (CI) con git rebase**
 
-![[Pasted image 20250420092747.png]]
-![[Pasted image 20250420092822.png]]
-![[Pasted image 20250420093452.png]]
+![](img-act6/Pasted_image_20250420092747.png)  
+![](img-act6/Pasted_image_20250420092822.png)  
+![](img-act6/Pasted_image_20250420093452.png)
+
 
 **Pregunta**: ¿Qué ventajas y desventajas observas al automatizar el rebase en un entorno de CI/CD?
 Automatizar el rebase en un entorno de CI/CD tiene la ventaja de mantener un historial lineal y una mejor integración continua. Sin embargo, tiene desventajas, como el cambio de hash de los commits, lo que obliga a realizar un `push` forzado que puede sobrescribir cambios en el repositorio remoto.
@@ -168,46 +171,57 @@ Automatizar el rebase en un entorno de CI/CD tiene la ventaja de mantener un his
 #### **Ejemplo:**
 
 1. **Inicialización del proyecto y creación de ramas**
-	![[Pasted image 20250423024721.png]]
+	![](img-act6/Pasted_image_20250423024721.png)
 2. **Fusión y resolución de conflictos**
 
    - **Paso 1**: Intenta fusionar feature-branch en main. 
    - **Paso 2**: Usa `git status` para identificar los archivos en conflicto, examina los archivos afectados.
-   ![[Pasted image 20250420100130.png]]
+   ![](img-act6/Pasted_image_20250420100130.png)
+
    
-   Mantenemos los cambios de nuestra rama con `git checkout --ours`: Este comando nos permite resolver conflictos de fusión conservando los cambios de nuestra rama actual y descartando los de la rama fusionada.![[Pasted image 20250420100325.png]]
-   ![[Pasted image 20250420100411.png]]
+   Mantenemos los cambios de nuestra rama con `git checkout --ours`: Este comando nos permite resolver conflictos de fusión conservando los cambios de nuestra rama actual y descartando los de la rama fusionada.
+   ![](img-act6/Pasted_image_20250420100325.png)  
+   ![](img-act6/Pasted_image_20250420100411.png)
+
 
 3. **Simulación de fusiones y uso de git diff**
 
    - **Paso 1**: Simula una fusión usando `git merge --no-commit --no-ff` para ver cómo se comportarían los cambios antes de realizar el commit.
-![[Pasted image 20250420101807.png]]
-![[Pasted image 20250420101852.png]]
+![](img-act6/Pasted_image_20250420101807.png)  
+![](img-act6/Pasted_image_20250420101852.png)
 
 3. **Uso de git mergetool**
 
-    ![[Pasted image 20250420102029.png]]
+    ![](img-act6/Pasted_image_20250420102029.png)
+
    - **Paso 2**: Usa la herramienta gráfica para resolver un conflicto de fusión.
-![[Pasted image 20250420102400.png]]
-![[Pasted image 20250420102414.png]]
-![[Pasted image 20250420102735.png]]
+![](img-act6/Pasted_image_20250420102400.png)
+![](img-act6/Pasted_image_20250420102414.png)
+![](img-act6/Pasted_image_20250420102735.png)
+
 
 5. **Uso de git revert y git reset**
 
    - **Paso 1**: Simula la necesidad de revertir un commit en main debido a un error. Usa `git revert` para crear un commit que deshaga los cambios.
-     ![[Pasted image 20250420103028.png]]![[Pasted image 20250420103256.png]]![[Pasted image 20250420103316.png]]
+     ![](img-act6/Pasted_image_20250420103028.png)
+      ![](img-act6/Pasted_image_20250420103256.png)
+      ![](img-act6/Pasted_image_20250420103316.png)
+
    - **Paso 2**: Realiza una prueba con `git reset --mixed` para entender cómo reestructurar el historial de commits sin perder los cambios no commiteados.
-    ![[Pasted image 20250420104132.png]]
-    ![[Pasted image 20250420104153.png]]
-    ![[Pasted image 20250420104213.png]]
+    ![](img-act6/Pasted_image_20250420104132.png)
+   ![](img-act6/Pasted_image_20250420104153.png)
+   ![](img-act6/Pasted_image_20250420104213.png)
+
 6. **Versionado semántico y etiquetado**
 
    - **Paso 1**: Aplica versionado semántico al proyecto utilizando tags para marcar versiones importantes.
-    ![[Pasted image 20250423025542.png]]
+    ![](img-act6/Pasted_image_20250423025542.png)
+
 7. **Aplicación de git bisect para depuración**
 
    - **Paso 1**: Usa `git bisect` para identificar el commit que introdujo un error en el código.
-    ![[Pasted image 20250423030202.png]]
+    ![](img-act6/Pasted_image_20250423030202.png)
+
 
 
 
