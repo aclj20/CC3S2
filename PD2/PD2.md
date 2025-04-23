@@ -17,13 +17,17 @@
 	   ![](img-pd2/Pasted_image_20250423053710.png)
 
    - **Ejemplo A: Listar ramas (Opción a)**
-		![](img-pd2/Pasted_image_20250423053727.png)
+
+	![](img-pd2/Pasted_image_20250423053727.png)
    - **Ejemplo B: Crear una nueva rama (Opción b)**
-	 	![](img-pd2/Pasted_image_20250423053734.png)
+	
+	![](img-pd2/Pasted_image_20250423053734.png)
 
 3. **Opción: Gestión de git diff (Opción 9)**
-		![](img-pd2/Pasted_image_20250423053744.png)
+	
+	![](img-pd2/Pasted_image_20250423053744.png)
 	
 4. **Opción: Gestión de hooks (Opción 10)**
-		![](img-pd2/Pasted_image_20250423053749.png)
+	
+	![](img-pd2/Pasted_image_20250423053749.png)
 
