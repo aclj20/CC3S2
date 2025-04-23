@@ -12,7 +12,7 @@ Pasos Previos: Se creó el repositorio `prueba-git-rebase` con un commit inicial
    > **Tarea**: Realiza el rebase de `new-feature` sobre `main`
 
 Se realizó el rebase de `new-feature` sobre `main` exitosamente
-![Historial después del rebase](img-act6/Pasted image 20250421092736.png)
+![Historial después del rebase](img-act6/Pasted_image_20250421092736.png)
 
 Luego de aplicar el rebase, ahora el historial de `new-feature` se volvió lineal y el hash del commit cambió a `e516815`, ya que es un nuevo commit reescrito.
 ![Historial de commit después del rebase](img-act6/Pasted_image_20250419195139.png)
