@@ -56,6 +56,7 @@ Instala las dependencias necesarias:
    - Dividir los escenarios en distintos *tags* (`@spanish`, `@english`) y ejecutar cada conjunto en etapas diferentes, o en paralelo.
    
    ![](img-act7/Pasted_image_20250422144048.png)
+   
 	![](img-act7/Pasted_image_20250422144743.png)
 
 
