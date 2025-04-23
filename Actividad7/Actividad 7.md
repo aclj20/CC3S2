@@ -21,7 +21,9 @@ Instala las dependencias necesarias:
 ![](img-act7/Pasted_image_20250420132148.png)
 4. **En un entorno DevOps**:
    - Agrega la ejecución de `behave` y `pytest` en tu *pipeline* de CI/CD, de modo que al hacer push de los cambios se ejecuten automáticamente las pruebas.
+   
    ![](img-act7/Pasted_image_20250420145930.png)
+
 ![](img-act7/Pasted_image_20250420153540.png)
 #### Ejercicio 2: **Manejo de cantidades fraccionarias de pepinos**
 
@@ -43,15 +45,18 @@ Instala las dependencias necesarias:
 #### Ejercicio 3: **Soporte para idiomas múltiples (Español e Inglés)**
 
 1. **Modifica** el parsing de tiempo para que reconozca palabras clave en inglés, además de español (por ejemplo, `"two hours"`, `"thirty minutes"`).
+
 ![](img-act7/Pasted_image_20250422141537.png)
 
 2. **Escribe** al menos dos escenarios de prueba en Gherkin que usen tiempos en inglés.
+
 ![](img-act7/Pasted_image_20250422142028.png)
 
 3. **En un pipeline DevOps**, podrías:
    - Dividir los escenarios en distintos *tags* (`@spanish`, `@english`) y ejecutar cada conjunto en etapas diferentes, o en paralelo.
+   
    ![](img-act7/Pasted_image_20250422144048.png)
-	![](img-act7/Pasted image 20250422144743.png)
+	![](img-act7/Pasted_image_20250422144743.png)
 
 
 #### Ejercicio 4: **Manejo de tiempos aleatorios**
@@ -74,12 +79,14 @@ Instala las dependencias necesarias:
 #### Ejercicio 5: **Validación de cantidades no válidas**
 
 1. **Añade** validaciones para evitar que el usuario ingrese < 0 pepinos o > 100 pepinos. y **modifica** la lógica para arrojar un error (excepción) si la cantidad no es válida.
+
 ![](img-act7/Pasted_image_20250422160603.png)
 
 2. **Implementa** un escenario de prueba que verifique el comportamiento de error.
-![](img-act7/Pasted_image_20250423034934.png)	![](img-act7/Pasted_image_20250422161239.png)
+![](img-act7/Pasted_image_20250423034934.png)	
+
 3. **En tu pipeline**, verifica que la excepción se maneje y el test falle de manera controlada si el sistema no lanza la excepción esperada.
-	![[Pasted image 20250422161728.png]]
+	![](img-act7/Pasted_image_20250422161728.png)
 
 #### Ejercicio 6: **Escalabilidad con grandes cantidades de pepinos**
 
