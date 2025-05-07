@@ -4,6 +4,7 @@
 En el presente ejemplo se desarrolla un sistema de carrito de compras, donde se aplican pruebas automatizadas siguiendo el patrón AAA (Arrange, Act, Assert).
 
 Este ejemplo adopta la siguiente estructura de carpetas y archivos:
+
 ![](img-8/Pasted_image_20250506163348.png)
 - **src/**: Contiene el código fuente principal. Incluye `carrito.py` con la lógica del carrito de compras y `factories.py` para generar objetos de prueba reutilizables.
 - **tests/**: Almacena las pruebas unitarias en `test_carrito.py`, estructuradas con el patrón AAA
@@ -52,8 +53,11 @@ El análisis estático identifica principalmente la ausencia de docstrings en m�
 ##### Ejercicio 1: Método para vaciar el carrito
 
 Se implementó el método `vaciar()` en `carrito.py`, el cual reinicia la lista `self.items` para eliminar todos los productos del carrito.
+
 ![](img-8/Pasted_image_20250422235140.png)
+
 Se definió una prueba en `tests/test_carrito.py` que verifica que al vaciar el carrito, la lista de productos quede vacía y el total calculado sea cero.
+
 ![](img-8/Pasted_image_20250422235117.png)
 
 
@@ -74,6 +78,7 @@ Se implementó el atributo `stock` dentro del modelo `Producto` en `src/carrito.
 ![](img-8/Pasted_image_20250423003425.png)
 
 Se modificó el método `agregar_producto` para verificar que la cantidad total del producto en el carrito no exceda su stock, lanzando una excepción en caso de sobrepasarlo.
+
 ![](img-8/Pasted_image_20250423003404.png)
 
 
@@ -93,6 +98,7 @@ Se implementó el método `obtener_items_ordenados` que permite ordenar los prod
 Se implementó la prueba `test_obtener_items_precio` para verificar que los productos en el carrito se ordenan correctamente en orden ascendente por precio.
 
 También se implementó la prueba `test_obtener_items_nombre`, que valida que los productos se ordenan alfabéticamente por nombre, incluso si fueron agregados en orden inverso.
+
 ![](img-8/Pasted%20image%2020250506170905.png)
 
 ![](img-8/Pasted%20image%2020250506170914.png)
