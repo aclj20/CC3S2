@@ -4,6 +4,7 @@
 En este ejemplo se extiende la clase `ShoppingCart` con nuevas funcionalidades, aplicando el ciclo Red–Green–Refactor para guiar el desarrollo paso a paso con pruebas automatizadas.
 
 Este ejemplo adopta la siguiente estructura de carpetas y archivos:
+
 ![](img-9/Pasted_image_20250505004830.png)
 
 - **src/**: Contiene el código fuente principal. Incluye `shopping_cart.py`, donde se implementa paso a paso la lógica del carrito de compras.
@@ -37,6 +38,7 @@ Se refactorizó el método `add_item` para permitir acumular la cantidad si el a
 **1. Escribir una prueba que falle (Red)**
 
 Se definió la prueba `test_remove_item` que espera eliminar un artículo del carrito.
+
 ![](img-9/Pasted%20image%2020250505010439.png)
 
 
@@ -58,6 +60,7 @@ Luego de implementar el método `remove_item`, se ejecutó la prueba y pasó exi
 **1. Escribir una prueba que falle (Red)**
 
 Se definió la prueba `test_calculate_total` para verificar que la clase `ShoppingCart` calcule correctamente el total sumando precio por cantidad de cada artículo.
+
 ![](img-9/Pasted%20image%2020250505010749.png)
 
 
@@ -80,16 +83,6 @@ Se refactorizó el método `calculate_total` usando comprensión de listas y `su
 ![](img-9/Pasted_image_20250505011008.png)
 
 
-#### **Código final acumulativo**
-
-**shopping_cart.py**
-
-![](img-9/Pasted%20image%2020250505011101.png)
-
-**test_shopping_cart.py**
-
-![](img-9/Pasted%20image%2020250505011223.png)
-
 
 #### **Ejecutar las pruebas**
 
@@ -102,6 +95,7 @@ Se ejecutaron las 3 pruebas correspondientes al desarrollo acumulativo del carri
 
 **1. Escribir una prueba que falle (Red)**
 Se definió la prueba `test_apply_discount` que simula una compra y aplica un 10 % de descuento con el método `apply_discount`
+
 ![](img-9/Pasted%20image%2020250505012310.png)
 
 Sin embargo, al no existir el método `apply_discount`, se produce un error al ejecutar la prueba
@@ -123,21 +117,11 @@ Luego de implementar el método `apply_discount`, se ejecutó la prueba y pasó 
 **3. Refactorizar el código si es necesario (Refactor)**
 
 Se refactorizó el manejo de descuentos validando que el porcentaje esté entre 0 y 100, y se añadió redondeo a dos decimales en `calculate_total` para mayor precisión.
+
 ![](img-9/Pasted%20image%2020250505012526.png)
 
 ![[Pasted image 20250505012441.png]]
 
-
-#### **Código final acumulativo**
-
-#### **shopping_cart.py**
-
-![](img-9/Pasted%20image%2020250505012701.png)
-
-
-#### **test_shopping_cart.py**
-
-![](img-9/Pasted%20image%2020250505012619.png)
 
 
 #### **Ejecutar las pruebas**
@@ -154,7 +138,9 @@ Se ejecutaron las 4 pruebas correspondientes al desarrollo acumulativo del carri
 
 ##### **1. Escribir una prueba que falle (Red)**
 El test valida que `ShoppingCart` invoque correctamente el método `process_payment` con el total calculado tras aplicar un descuento.
+
 ![[Pasted image 20250505013110.png]]
+
 ![](img-9/Pasted_image_20250505013203.png)
 
 
@@ -164,7 +150,9 @@ Sin embargo, al no existir el método `process_payment` en la clase `ShoppingCar
 ##### **2. Implementar el código para pasar la prueba (Green)**
 
 Se implementó la lógica mínima del método `process_payment`, permitiendo delegar el cobro al `payment_gateway` mediante inyección de dependencia.
+
 ![[Pasted image 20250505013333.png]]
+
 ![](img-9/Pasted%20image%2020250505013317.png)
 
 
@@ -332,6 +320,7 @@ Luego de llamar a `send_welcome_email`, se ejecutó la prueba y pasó exitosamen
 En este ejercicio, veremos un ejemplo de 6 iteraciones en la metodología TDD **(Red-Green-Refactor)**.
 #### Estructura recomendada
 Este ejemplo adopta la siguiente estructura de carpetas y archivos:
+
 ![](img-9/Pasted%20image%2020250505230228.png)
 
 #### Iteración 1: Agregar usuario (Básico)
