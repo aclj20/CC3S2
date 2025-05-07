@@ -23,6 +23,7 @@ He creado pruebas unitarias con Pytest para la función de parsing, que conviert
 Utilicé la marca `@pytest.mark.parametrize` para probar varios casos. Las pruebas verifican que el resultado de la función se ajuste a los valores esperados, considerando posibles variaciones en el formato de entrada, como minutos y segundos.
 
 ![](img-act7/Pasted_image_20250420132211.png)
+
 He ejecutado las pruebas unitarias con Pytest y todas han pasado correctamente.
 ![](img-act7/Pasted_image_20250420132148.png)
 
@@ -106,6 +107,7 @@ He añadido validaciones para asegurar que la cantidad de pepinos ingresada est�
 ![](img-act7/Pasted_image_20250422160603.png)
 
 He implementado dos escenarios en Gherkin para verificar que el sistema lance errores cuando se ingresa una cantidad negativa de pepinos o una cantidad mayor a 100. 
+
 ![](img-act7/Pasted_image_20250423034934.png)	
 
 He añadido steps para verificar que las excepciones se manejen correctamente. Si no se lanza la excepción esperada, el test falla, asegurando un manejo adecuado de errores en el sistema.
@@ -130,6 +132,7 @@ He creado un test con `pytest` que valida que, si se comen más de 10 pepinos y 
 ![](img-act7/Pasted_image_20250422182858.png)
 
 He convertido el test unitario en un escenario Gherkin, donde tras comer 15 pepinos y esperar 2 horas, el estómago debería gruñir, de manera más orientada al usuario.
+
 ![](img-act7/Pasted_image_20250422183958.png)
 
 En el pipeline de DevOps, ejecuto primero los tests unitarios con `pytest`, que son rápidos, y luego los tests de Behave, que son más lentos y de nivel de integración, separados por los tags `@spanish` y `@english`.
@@ -244,7 +247,9 @@ Convertí esos criterios en escenarios BDD.
 Cree un test unitario con Pytest que use `unittest.mock` para simular el paso del tiempo.
 
 ![](img-act7/Pasted%20image%2020250507011832.png)
- **En Behave**, usé `environment.py` para inyectar un mock o stub del reloj en el `before_scenario`.
+ 
+**En Behave**, usé `environment.py` para inyectar un mock o stub del reloj en el `before_scenario`.
+
 ![](img-act7/Pasted%20image%2020250507012149.png)
 
 Todos los escenarios y pasos en los tests se ejecutaron correctamente. La salida muestra que 20 escenarios pasaron sin errores, con 60 pasos completados exitosamente.
