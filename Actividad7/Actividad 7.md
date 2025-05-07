@@ -45,10 +45,13 @@ He implementado un nuevo escenario en Gherkin para verificar el comportamiento c
 He validado que el sistema lance una excepción si se ingresa una cantidad negativa de pepinos.
 
 Agregué una validación para asegurarse de que no se pueda ingresar una cantidad negativa de pepinos. Si se intenta, se lanza un `ValueError` con un mensaje adecuado.
+
 ![](img-act7/Pasted_image_20250421101640.png)
 
 En este escenario, intenté ingresar una cantidad negativa de pepinos (-3), lo que generó correctamente una excepción con el mensaje "No se puede comer una cantidad negativa de pepinos".
+
 ![](img-act7/Pasted_image_20250421103606.png)
+
 Esto fue confirmado por el error mostrado en el traceback, donde el `ValueError` fue lanzado como se esperaba
 ![](img-act7/Pasted_image_20250421101755.png)
 
@@ -72,6 +75,7 @@ Los escenarios con el tag `@spanish` verifican el comportamiento con descripcion
 ![](img-act7/Pasted_image_20250422144048.png)
 
 Mientras que los de `@english` verifican las descripciones en inglés.
+
 ![](img-act7/Pasted_image_20250422144743.png)
 
 
@@ -82,6 +86,7 @@ He creado una función que, al recibir una descripción como "entre 1 y 3 horas"
 ![](img-act7/Pasted_image_20250422152925.png)
 
 He implementado un escenario en Gherkin para verificar que, después de comer pepinos y esperar un tiempo aleatorio (entre 2 y 4 horas), el estómago pueda gruñir.
+
 ![](img-act7/Pasted_image_20250422153915.png)
 
 He modificado el código para que, además de generar el tiempo aleatorio, también lo imprima en la consola
@@ -91,6 +96,7 @@ En este escenario, se generó un tiempo aleatorio de 1.34 horas pero la prueba f
 ![](img-act7/Pasted_image_20250422155750.png)
 
 He utilizado un `seed` fijo (`random.seed(20)`) para asegurar resultados consistentes en las pruebas y evitar problemas de "flakiness" en el pipeline de DevOps.
+
 ![](img-act7/Pasted_image_20250422160047.png)
 
 #### Ejercicio 5: **Validación de cantidades no válidas**
@@ -98,6 +104,7 @@ He utilizado un `seed` fijo (`random.seed(20)`) para asegurar resultados consist
 He añadido validaciones para asegurar que la cantidad de pepinos ingresada esté entre 0 y 100. Si el usuario ingresa una cantidad negativa o mayor a 100, se lanza un `ValueError` . Además, la función también maneja el caso donde no se puede convertir la entrada a un número flotante, lanzando un error en caso de que el formato de la cantidad sea inválido.
 
 ![](img-act7/Pasted_image_20250422160603.png)
+
 He implementado dos escenarios en Gherkin para verificar que el sistema lance errores cuando se ingresa una cantidad negativa de pepinos o una cantidad mayor a 100. 
 ![](img-act7/Pasted_image_20250423034934.png)	
 
@@ -119,11 +126,14 @@ He analizado la cobertura de pruebas utilizando la herramienta `coverage` en el 
 #### Ejercicio 8: **De TDD a BDD – Convertir requisitos técnicos a pruebas en Gherkin**
 
 He creado un test con `pytest` que valida que, si se comen más de 10 pepinos y se espera 2 horas, el estómago gruñe, verificando que el método `esta_gruñendo()` devuelva `True`.
+
 ![](img-act7/Pasted_image_20250422182858.png)
+
 He convertido el test unitario en un escenario Gherkin, donde tras comer 15 pepinos y esperar 2 horas, el estómago debería gruñir, de manera más orientada al usuario.
 ![](img-act7/Pasted_image_20250422183958.png)
 
 En el pipeline de DevOps, ejecuto primero los tests unitarios con `pytest`, que son rápidos, y luego los tests de Behave, que son más lentos y de nivel de integración, separados por los tags `@spanish` y `@english`.
+
 ![](img-act7/Pasted_image_20250422184506.png)
 
 #### Ejercicio 9: **Identificación de criterios de aceptación para historias de usuario**
@@ -141,14 +151,18 @@ He implementado los pasos en Behave para gestionar los escenarios, validando la 
 He escrito un test unitario para la función `pepinos_ingestados()`, que retorna el total de pepinos ingeridos. 
 
 ![](img-act7/Pasted%20image%2020250507000249.png)
+
 El test asegura que después de comer 15 pepinos, el valor retornado sea 15, siguiendo la secuencia TDD antes de implementar los escenarios en BDD.
+
 ![](img-act7/Pasted%20image%2020250507000332.png)
 
 He creado un escenario en Gherkin donde, tras comer 15 pepinos, el usuario consulta y ve que ha comido 15 pepinos.
 ![](img-act7/Pasted%20image%2020250506234143.png)
 
 He implementado los pasos en Behave para verificar que, al consultar la cantidad de pepinos ingeridos, el resultado coincida con el valor esperado.
+
 ![](img-act7/Pasted%20image%2020250506235406.png)
+
 ![](img-act7/Pasted%20image%2020250507000511.png)
 
 El escenario en Gherkin se ejecutó correctamente.
@@ -172,11 +186,13 @@ He validado que todas las pruebas unitarias y los escenarios BDD siguen pasando 
 ![](img-act7/Pasted%20image%2020250507002507.png)
 
 He activado la medición de cobertura en el pipeline utilizando `pytest` con las opciones `--cov` para indicar la carpeta de código fuente y `--cov-report` para generar un reporte en formato terminal y HTML.
+
 ![](img-act7/Pasted%20image%2020250507002719.png)
 
 #### Ejercicio 12: **Ciclo completo de TDD a BDD – Añadir nueva funcionalidad**
 
 He desarrollado una nueva funcionalidad desde cero utilizando TDD y BDD. En este caso, la funcionalidad predice si el estómago gruñirá dado un número de pepinos y un tiempo de espera.
+
 ![](img-act7/Pasted%20image%2020250507002913.png)
 
 He convertido el test en una historia de usuario y escrito el escenario BDD correspondiente.
@@ -219,17 +235,20 @@ Convertí esos criterios en escenarios BDD.
 
 
 **Cree** un archivo `clock.py` con una función `get_current_time()`.
+
 ![](img-act7/Pasted%20image%2020250507011716.png)
 
 **Modifiqué** `Belly` para aceptar un `clock_service` opcional que se inyecta.
 ![](img-act7/Pasted%20image%2020250507011746.png)
 
 Cree un test unitario con Pytest que use `unittest.mock` para simular el paso del tiempo.
+
 ![](img-act7/Pasted%20image%2020250507011832.png)
  **En Behave**, usé `environment.py` para inyectar un mock o stub del reloj en el `before_scenario`.
 ![](img-act7/Pasted%20image%2020250507012149.png)
 
 Todos los escenarios y pasos en los tests se ejecutaron correctamente. La salida muestra que 20 escenarios pasaron sin errores, con 60 pasos completados exitosamente.
+
 ![](img-act7/Pasted%20image%2020250507012409.png)
 
 
