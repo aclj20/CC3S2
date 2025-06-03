@@ -1,7 +1,6 @@
 ### Actividad : Orquestador local de entornos de desarrollo simulados con Terraform
 
 
-
 #### Ejercicios
 
 1.  **Ejercicio de evolvabilidad y resolución de problemas:**
@@ -34,8 +33,9 @@
     
         Ejecutamos `start_simulated_service.sh`
     ![alt text](img/image-11.png)
+    
         Observamos la correcta creación del archivo `.db_lock` después de la ejecución
-
+        
         ![alt text](img/image-10.png)
 
 2.  **Ejercicio de refactorización y principios:**
@@ -63,7 +63,3 @@
         1.  Modifica el script `validate_config.py` para que busque explícitamente el contenido de `mensaje_global` (que el estudiante tendrá que "conocer" o pasar como argumento al script de validación) dentro de los archivos `config.json`. Si lo encuentra, debe marcarlo como un "hallazgo de seguridad crítico".
         2.  Discute cómo Terraform maneja los valores `sensitive` y cómo esto se puede perder si no se tiene cuidado al pasarlos a scripts o plantillas.
         3.  (Opcional) Modifica la plantilla `config.json.tpl` para ofuscar o no incluir directamente el `mensaje_global` si es demasiado sensible, tal vez solo una referencia.
-
-#### Presentación
-
-Presenta la actividad completa en tu repositorio indicando los cambios realizados por los ejercicios a partir del código entregado.
