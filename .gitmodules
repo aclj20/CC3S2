@@ -14,3 +14,6 @@
 [submodule "Actividad20/Actividad20"]
 	path = Actividad20/Actividad20
 	url = https://github.com/SandroCJ210/Actividad20.git
+[submodule "Actividad19/DS_Actividad_19"]
+	path = Actividad19/DS_Actividad_19
+	url = https://github.com/aclj20/DS_Actividad_19.git
