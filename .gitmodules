@@ -5,5 +5,9 @@
 	path = Actividad5/repoPrueba
 	url = https://github.com/aclj20/repoPruebaSubmod.git
 [submodule "Actividad17-18/DS_Actividad_17_18"]
-	path = Actividad17-18/DS_Actividad_17_18
+	path = Actividad17/DS_Actividad_17_18
+	url = https://github.com/aclj20/DS_Actividad_17_18.git
+
+[submodule "Actividad18/DS_Actividad_17_18"]
+	path = Actividad18/DS_Actividad_17_18
 	url = https://github.com/aclj20/DS_Actividad_17_18.git
