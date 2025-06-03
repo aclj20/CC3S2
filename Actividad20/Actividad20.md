@@ -4,7 +4,7 @@
 Revisamos el proyecto de la actividad
 
 ![alt text](img/image.png)
-``
+
 * La carpeta `modules/simulated_app/` contiene los archivos `main.tf.json` y `network.tf.json`, que son archivos de configuración de Terraform en formato JSON.
 
 * El archivo `generate_envs.py` genera entornos locales a partir de los archivos `main.tf.json` y `network.tf.json`
@@ -30,9 +30,13 @@ Cuando ejecutamos `terraform plan` observamos que detecta un cambio en el trigge
 * **Pregunta**
 
   * ¿Cómo interpreta Terraform el cambio de variable?
+  Terraform compara el valor modificado de la variable con el valor registrado en `terraform.tfstate`. Si algún recurso utiliza esta variable, entonces se debe aplicar el cambio. Por otro lado, si dicha variable no se usa en algún recurso entonces no se detectan cambios. 
   * ¿Qué diferencia hay entre modificar el JSON vs. parchear directamente el recurso?
+  Cuando modificamos algun archivo json, estamos modificando el estado deseado que posteriormente puede aplicar dichas modificaciones y generar un nuevo estado actual, mientras que cuando parcheamos directamente el recurso estamos modificando el estado actual sin actualizar la configuracion deseada en json.
   * ¿Por qué Terraform no recrea todo el recurso, sino que aplica el cambio "in-place"?
+  Terraform solo destruye y crea un recurso cuando se modifica alguna variable que se encuentra dentro de triggers
   * ¿Qué pasa si editas directamente `main.tf.json` en lugar de la plantilla de variables?
+  Terraform reconoce el cambio en el recurso porque lo definimos de manera directa en el recurso, el cambio se aplica con terraform apply
 
 #### Procedimiento
 
@@ -59,6 +63,7 @@ Luego, comprobamos que vuelve a "app2".
  Creamos en un nuevo directorio `legacy/` que contiene un simple `run.ps1` + `config.cfg` con parámetros.
 
 `config.cfg`
+
 ![alt text](img/image-10.png)
 
 `run.ps1`
@@ -135,10 +140,12 @@ with open(os.path.join(ENV_DIR, "main.tf.json"), "w") as f:
     json.dump(main_json, f, indent=4)
 ```
 
-Los archivos se generaron de manera exitosa
+Los archivos se generaron de manera exitosa.
+
 ![alt text](img/image-11.png)
 
 Luego verifique con `terraform plan` que el resultado es igual al script legacy.
+
 ![alt text](img/image-12.png)
 
 #### Fase 3: Escribiendo código limpio en IaC 
