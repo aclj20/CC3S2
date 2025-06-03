@@ -1,6 +1,7 @@
 ### Actividad : Orquestador local de entornos de desarrollo simulados con Terraform
 
 
+
 #### Ejercicios
 
 1.  **Ejercicio de evolvabilidad y resolución de problemas:**
@@ -34,7 +35,8 @@
         Ejecutamos `start_simulated_service.sh`
     ![alt text](img/image-11.png)
         Observamos la correcta creación del archivo `.db_lock` después de la ejecución
-    ![alt text](img/image-10.png)
+
+        ![alt text](img/image-10.png)
 
 2.  **Ejercicio de refactorización y principios:**
 
