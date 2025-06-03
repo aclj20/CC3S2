@@ -8,10 +8,11 @@ Revisamos el proyecto de la actividad
 * La carpeta `modules/simulated_app/` contiene los archivos `main.tf.json` y `network.tf.json`, que son archivos de configuración de Terraform en formato JSON.
 
 * El archivo `generate_envs.py` genera entornos locales a partir de los archivos `main.tf.json` y `network.tf.json`
-2. **Verifica** que puedes ejecutar:
+
+Verificamos que podemos ejecutar:
 
 ![alt text](img/image-0.png)
-3. **Objetivo**: conocer la plantilla base y el generador en Python.
+
 
 ####  Fase 1: Expresando el cambio de infraestructura
 
@@ -29,13 +30,13 @@ Cuando ejecutamos `terraform plan` observamos que detecta un cambio en el trigge
 
 * **Pregunta**
 
-  * ¿Cómo interpreta Terraform el cambio de variable?
+  * ¿Cómo interpreta Terraform el cambio de variable? :
   Terraform compara el valor modificado de la variable con el valor registrado en `terraform.tfstate`. Si algún recurso utiliza esta variable, entonces se debe aplicar el cambio. Por otro lado, si dicha variable no se usa en algún recurso entonces no se detectan cambios. 
-  * ¿Qué diferencia hay entre modificar el JSON vs. parchear directamente el recurso?
+  * ¿Qué diferencia hay entre modificar el JSON vs. parchear directamente el recurso? :
   Cuando modificamos algun archivo json, estamos modificando el estado deseado que posteriormente puede aplicar dichas modificaciones y generar un nuevo estado actual, mientras que cuando parcheamos directamente el recurso estamos modificando el estado actual sin actualizar la configuracion deseada en json.
-  * ¿Por qué Terraform no recrea todo el recurso, sino que aplica el cambio "in-place"?
+  * ¿Por qué Terraform no recrea todo el recurso, sino que aplica el cambio "in-place"? :
   Terraform solo destruye y crea un recurso cuando se modifica alguna variable que se encuentra dentro de triggers
-  * ¿Qué pasa si editas directamente `main.tf.json` en lugar de la plantilla de variables?
+  * ¿Qué pasa si editas directamente `main.tf.json` en lugar de la plantilla de variables? :
   Terraform reconoce el cambio en el recurso porque lo definimos de manera directa en el recurso, el cambio se aplica con terraform apply
 
 #### Procedimiento
@@ -56,6 +57,7 @@ En el environment `app2` editamos manualmente main.tf.json, para cambiar `"name"
 ![alt text](img/image-7.png)
 
 Luego, comprobamos que vuelve a "app2".
+
 ![alt text](img/image-14.png)
 #### B. Migrando a IaC
 
@@ -67,9 +69,11 @@ Luego, comprobamos que vuelve a "app2".
 ![alt text](img/image-10.png)
 
 `run.ps1`
+
 ![alt text](img/image-9.png)
 
 Ejecutamos `run.ps1`
+
 ![alt text](img/image-8.png)
 
 Luego, escribimos un script Python que lea `config.cfg` y `run.sh` para generar automáticamente un par `network.tf.json` + `main.tf.json` equivalente.
