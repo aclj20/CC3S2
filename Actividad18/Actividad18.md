@@ -27,10 +27,12 @@ En este ejercicio, configuraramos un burndown chart para el sprint plan usando G
 
 #### 1: Configurar tu Burndown Chart
 
-Configutamos burndown chart para mostrar el estado de las historias en la columna Done.
+Configuramos burndown chart para mostrar el estado de las historias en la columna Done.
+
 ![alt text](img/image-4.png)
 
 Configuramos el gráfico de burdown chart
+
 ![alt text](img/image-5.png)
 
 Gráfico por sprints
