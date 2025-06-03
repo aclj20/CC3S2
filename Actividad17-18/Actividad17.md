@@ -84,6 +84,7 @@ Vinculamos las historias de usuario existentes, como "Need a service that has a 
 ##### Ejercicio 2: Uso avanzado de etiquetas (labels) para priorización y estado
 
 Creamos nuevas etiquetas como **high priority**, **medium priority**, y **low priority**.
+
 ![alt text](img/image-14.png)
 
 Luego, asignamos etiquetas a las historias de usuario que indiquen su prioridad
