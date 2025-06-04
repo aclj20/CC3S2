@@ -574,6 +574,7 @@ Modificamos manualmente la variable `name` de `server2 -> hacked-server` en el r
             }
 ```
 Con el comando `terraform plan` observamos que terrafom indica que se debe reemplazar el recurso que tiene "hacked-server" con uno nuevo que tenga "server2"
+
 ![alt text](img/image-13.png)
 
 Por último, con `terraform apply` terraform corrige el drift y observamos como regresa a `server2` como se encontraba originalmente
